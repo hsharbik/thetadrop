@@ -22,7 +22,8 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_argument("user-data-dir=chrome-data")
 chrome_options.add_argument(f"user-data-dir={scriptDirectory}\\userdata")
 
-driver = webdriver.Chrome("K:\Project\Python\\thetadrop\chromedriver.exe", chrome_options=chrome_options)
+# TODO : fixed url path and test in Trven Device
+driver = webdriver.Chrome(r"../thetadrop/chromedriver.exe", chrome_options=chrome_options)
 
 
 # print(input(" Connect your waller address :"))
