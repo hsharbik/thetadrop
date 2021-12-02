@@ -35,3 +35,10 @@ print(input("Start Project ..... :"))
 
 deposit_elements = driver.find_element_by_xpath("(//button[.='Deposit funds'])[2]")
 deposit_elements.click()
+
+deposit_TFuel_elements = driver.find_element_by_xpath("//button[normalize-space()='Deposit TFuel']")
+deposit_TFuel_elements.click()
+
+i_agree_elements = driver.find_element_by_xpath("//button[normalize-space()='I AGREE']")
+i_agree_elements.click()
+
