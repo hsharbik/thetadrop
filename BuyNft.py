@@ -23,7 +23,7 @@ chrome_options.add_argument("user-data-dir=chrome-data")
 chrome_options.add_argument(f"user-data-dir={scriptDirectory}\\userdata")
 
 # TODO: How much you want to buy
-buying_limits = 10
+buying_limits = 20
 
 # TODO: You need to put your NFT link here
 NFT_link = "https://thetatv.thetadrop.com/order/saleord_3vpe9m5s7mhty4yn3xssdbun"
@@ -50,7 +50,7 @@ for i in range(buying_limits):
 
     Pay_with_TFuel_elements = driver.find_element_by_xpath("//button[normalize-space()='Pay with TFUEL']")
     Pay_with_TFuel_elements.click()
-    print("Buying" + str(i) + "no nft")
+    print("Buying " + str(i) + " no nft")
 
 
 
