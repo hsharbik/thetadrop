@@ -22,12 +22,14 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_argument("user-data-dir=chrome-data")
 chrome_options.add_argument(f"user-data-dir={scriptDirectory}\\userdata")
 
+# TODO: How much you want to buy
+buying_limits = 10
 
 # TODO: You need to put your NFT link here
-NFT_link = "https://wpt.thetadrop.com/drop/drop_h3kf955wed8em15bv0s24s1d7jk"
+NFT_link = "https://thetatv.thetadrop.com/order/saleord_3vpe9m5s7mhty4yn3xssdbun"
 
+buy_xpath = "//button[normalize-space()='Buy']"
 
-buy_xpath = "(//button[.='Deposit funds'])[1]"
 
 # TODO : fixed url path and test in Trven Device
 driver = webdriver.Chrome(r"../thetadrop/chromedriver.exe", chrome_options=chrome_options)
@@ -35,21 +37,21 @@ driver = webdriver.Chrome(r"../thetadrop/chromedriver.exe", chrome_options=chrom
 
 # print(input(" Connect your waller address :"))
 driver.implicitly_wait(10)
-# TODO : Original NFT Like will be Different Make a Variable for that
 driver.get(NFT_link)
 
 
 print(input("Start Project ..... :"))
 
-# deposit_elements = driver.find_element_by_xpath("(//button[.='Deposit funds'])[2]")
-deposit_elements = driver.find_element_by_xpath(buy_xpath)
-deposit_elements.click()
+for i in range(buying_limits):
+    driver.implicitly_wait(1)
+    driver.get(NFT_link)
+    deposit_elements = driver.find_element_by_xpath(buy_xpath)
+    deposit_elements.click()
 
-deposit_TFuel_elements = driver.find_element_by_xpath("//button[normalize-space()='Deposit TFuel']")
-deposit_TFuel_elements.click()
+    Pay_with_TFuel_elements = driver.find_element_by_xpath("//button[normalize-space()='Pay with TFUEL']")
+    Pay_with_TFuel_elements.click()
+    print("Buying" + str(i) + "no nft")
 
-i_agree_elements = driver.find_element_by_xpath("//button[normalize-space()='I AGREE']")
-i_agree_elements.click()
 
-# TODO: Buy NFT and Make Repetitions Using Loop
+
 
