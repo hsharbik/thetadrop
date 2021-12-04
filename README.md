@@ -9,6 +9,7 @@ Its but the NFT when the first Drop out come.
 ### Setup Video 
 
 
-![thetadrop](https://user-images.githubusercontent.com/4492335/144695923-55809224-0f2e-4b02-90e2-b671de8d3de6.png)
+![thetadrop](https://user-images.githubusercontent.com/4492335/144695923-55809224-0f2e-4b02-90e2-b671de8d3de6.png)](
+https://youtu.be/CDTNr2G2W_0)
 
 https://youtu.be/CDTNr2G2W_0
