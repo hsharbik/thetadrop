@@ -36,13 +36,13 @@ buying_limits = 10
 NFT_link = "https://thetatv.thetadrop.com/drop/drop_ympzwuf4kigu10457x1d8gang8q"
 
 # This is for Single Buy Button
-# buy_xpath = "//button[normalize-space()='Buy Now']"
+buy_xpath = "//button[normalize-space()='Buy Now']"
 # buy_xpath = "/html[1]/body[1]/div[1]/div[3]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
 
 # Experiment With Others
 # buy_xpath = "//button[normalize-space()='Buy']"
 # buy_xpath = "(//button[@type='button'][normalize-space()='View Bids'])"
-buy_xpath = "/html[1]/body[1]/div[1]/div[3]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
+# buy_xpath = "/html[1]/body[1]/div[1]/div[3]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
 
 # This is for Multiple Buy Button
 # buy_xpath = "(//button[@type='button'][normalize-space()='Buy Now'])"
@@ -77,12 +77,14 @@ try:
                 print("Buy Button not found")
                 print("Need Administrator to fixed the bugs")
                 winsound.Beep(frequency, 5000)
-                print(input("Start Project ..... :"))
+                time.sleep(10)
+                # print(input("Start Project ..... :"))
         except:
             print("Buy Button not found")
             print("Need Administrator to fixed the bugs")
             winsound.Beep(frequency, 5000)
-            print(input("Start Project ..... :"))
+            time.sleep(10)
+            # print(input("Start Project ..... :"))
 
 # This is for Multiple Buy Button
         # deposit_elements = driver.find_elements_by_xpath(buy_xpath)
@@ -91,10 +93,16 @@ try:
         # print(input("Start Project ..... :"))
         # deposit_elements[NFT_Number - 1].click()
 
-        print(input("Start Project ..... :"))
-        Pay_with_TFuel_elements = driver.find_element_by_xpath("//button[normalize-space()='Pay with TFUEL']")
-        Pay_with_TFuel_elements.click()
-        print("Buying " + str(i) + " no nft")
+        try:
+            Pay_with_TFuel_elements = driver.find_element_by_xpath("//button[normalize-space()='Pay with TFUEL']")
+            Pay_with_TFuel_elements.click()
+            print("Buying " + str(i) + " no nft")
+        except:
+            print("Pay with TFUEL not found")
+            print("Need Administrator to fixed the bugs")
+            winsound.Beep(frequency, 5000)
+            time.sleep(10)
+            # print(input("Start Project ..... :"))
 
 except:
     driver.quit()
