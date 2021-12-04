@@ -12,4 +12,4 @@ Its but the NFT when the first Drop out come.
 ![thetadrop](https://user-images.githubusercontent.com/4492335/144695923-55809224-0f2e-4b02-90e2-b671de8d3de6.png)](
 https://youtu.be/CDTNr2G2W_0)
 
-[![Youtube Corona](https://user-images.githubusercontent.com/4492335/78470086-6ee3e080-7748-11ea-9a54-f224b28dc42d.png)](https://www.youtube.com/watch?v=CDTNr2G2W_0)
+[![Youtube Corona](https://user-images.githubusercontent.com/4492335/144695923-55809224-0f2e-4b02-90e2-b671de8d3de6.png)](https://www.youtube.com/watch?v=CDTNr2G2W_0)
