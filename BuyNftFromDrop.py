@@ -33,7 +33,7 @@ chrome_options.add_argument(f"user-data-dir={scriptDirectory}\\userdata")
 buying_limits = 10
 
 # TODO: You need to put your NFT link here
-NFT_link = "https://thetatv.thetadrop.com/drop/drop_ympzwuf4kigu10457x1d8gang8q"
+NFT_link = "https://wpt.thetadrop.com/drop/drop_h3kf955wed8em15bv0s24s1d7jk"
 
 # This is for Single Buy Button
 buy_xpath = "//button[normalize-space()='Buy Now']"
