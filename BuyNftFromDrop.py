@@ -36,12 +36,13 @@ buying_limits = 10
 NFT_link = "https://thetatv.thetadrop.com/drop/drop_ympzwuf4kigu10457x1d8gang8q"
 
 # This is for Single Buy Button
-buy_xpath = "//button[normalize-space()='Buy Now']"
+# buy_xpath = "//button[normalize-space()='Buy Now']"
 # buy_xpath = "/html[1]/body[1]/div[1]/div[3]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
 
 # Experiment With Others
 # buy_xpath = "//button[normalize-space()='Buy']"
 # buy_xpath = "(//button[@type='button'][normalize-space()='View Bids'])"
+buy_xpath = "/html[1]/body[1]/div[1]/div[3]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]"
 
 # This is for Multiple Buy Button
 # buy_xpath = "(//button[@type='button'][normalize-space()='Buy Now'])"
@@ -58,7 +59,6 @@ driver.get(NFT_link)
 # print(input("Start Project ..... :"))
 
 try:
-
     for i in range(buying_limits):
         driver.implicitly_wait(1)
         driver.get(NFT_link)
@@ -67,9 +67,17 @@ try:
         # This is for Single Buy Button
         try:
             deposit_elements = driver.find_element_by_xpath(buy_xpath)
-            print(len(deposit_elements))
-            print(input("Start Project ..... :"))
-            deposit_elements.click()
+            print(deposit_elements.text)
+            print(len(deposit_elements.text))
+            if len(deposit_elements.text) > 2:
+                # print(input("Start Project ..... :"))
+                deposit_elements.click()
+            else:
+                print("Check the x path")
+                print("Buy Button not found")
+                print("Need Administrator to fixed the bugs")
+                winsound.Beep(frequency, 5000)
+                print(input("Start Project ..... :"))
         except:
             print("Buy Button not found")
             print("Need Administrator to fixed the bugs")
